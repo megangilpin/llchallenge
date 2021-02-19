@@ -1,0 +1,27 @@
+.hero-text {
+  font-size: 6.5rem;
+  font-weight: 700;
+  letter-spacing: 0.73px;
+  line-height: 7.6rem;
+}
+
+.header-text-primary {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  color: $color-primary;
+}
+
+.header-text-secondary {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+.header-text-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}

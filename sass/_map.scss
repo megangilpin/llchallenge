@@ -1,0 +1,7 @@
+.map {
+  height: 550px;
+  width: 100vw;
+  @include respond(phone) {
+    height: 350px;
+  }
+}

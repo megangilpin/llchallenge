@@ -1,0 +1,24 @@
+.btn {
+  text-decoration: none;
+  padding: 1.2rem 4.6rem;
+  display: inline-block;
+  transition: all 0.2s;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  border: none;
+
+  &--green {
+    background-color: $color-secondary-light;
+    color: $color-secondary;
+
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-secondary-light;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

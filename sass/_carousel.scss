@@ -1,0 +1,98 @@
+// splide class names from splide.js
+.splide {
+  &__slide {
+    width: 550px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 2s;
+    @include respond(phone) {
+      height: 375px;
+      width: 100vw;
+    }
+  }
+
+  &__arrows {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__arrow {
+    background-color: transparent;
+    margin: 0 2rem;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__focus {
+    opacity: 1;
+
+    & div:first-of-type {
+      box-shadow: 0px 0px 10px 5px rgba(7, 7, 7, 0.12);
+    }
+  }
+}
+
+// carousel cards
+.card {
+  border-radius: 5px;
+  width: 550px;
+  height: 250px;
+  box-shadow: 0px 0px 5px 5px rgba(7, 7, 7, 0.05);
+  display: flex;
+  overflow: hidden;
+  @include respond(phone) {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 0px;
+    padding-bottom: 2rem;
+    background-color: $color-white;
+  }
+
+  &__imageBox {
+    background-color: $color-grey-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    @include respond(phone) {
+      padding: 1rem 0;
+    }
+  }
+  &__image {
+    width: 140px;
+    height: 140px;
+    @include respond(phone) {
+      width: 30%;
+      height: auto;
+    }
+  }
+  &__text {
+    background-color: $color-white;
+    padding: 0 2rem;
+    color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    & span {
+      color: $color-secondary;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    & p {
+      color: $color-black;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+.contact {
+  width: 100%;
+  height: 725px;
+  display: flex;
+  @include respond(phone) {
+    height: auto;
+  }
+
+  &__formBox {
+    flex: 3 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem 0 6.5rem;
+    @include respond(tab-land) {
+      padding: 0 2rem 0 3rem;
+    }
+    @include respond(tab-port) {
+      padding: 0 2rem 0 3rem;
+    }
+    @include respond(phone) {
+      padding: 5rem 3rem;
+    }
+  }
+
+  &__header {
+    color: $color-primary;
+    margin-bottom: 1rem;
+  }
+  &__textBox {
+    max-width: 425px;
+    margin-bottom: 5rem;
+  }
+
+  &__imageBox {
+    background-image: url('/assets/img/image3.png');
+    background-position: 100% 90%;
+    width: 520px;
+    height: 100%;
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}
+
+.form {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 550px;
+  @include respond(phone) {
+    justify-content: center;
+  }
+
+  &__group {
+    margin-bottom: 1rem;
+    width: 47%;
+    @include respond(phone) {
+      width: 90%;
+    }
+  }
+
+  &__input {
+    font-family: inherit;
+    color: $color-primary;
+    padding: 1.5rem;
+    border-radius: 2px;
+    background-color: rgba($color-grey-dark, 0.125);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    display: block;
+    transition: all 0.3;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-black;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    margin-bottom: 3.5rem;
+    @include respond(phone) {
+      width: 90%;
+    }
+  }
+
+  &__message {
+    font-family: inherit;
+    color: $color-primary;
+    padding: 1.5rem;
+    border-radius: 2px;
+    background-color: rgba($color-grey-dark, 0.125);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    max-width: 100%;
+    height: 136px;
+    display: block;
+    margin: 0;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      border: 2px solid $color-primary;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-black;
+    }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    display: block;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__selectBox {
+    width: 47%;
+    margin-bottom: 3.5rem;
+    @include respond(phone) {
+      width: 90%;
+    }
+  }
+  &__select {
+    appearance: none;
+    font-family: inherit;
+    color: $color-black;
+    padding: 1.7rem;
+    border-radius: 2px;
+    background-color: rgba($color-grey-dark, 0.125);
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: inherit;
+    outline: none;
+    -webkit-appearance: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    background-image: url(../assets/img/icon/dropdown_triangle.svg);
+    background-position: calc(100% - 20px) calc(1em + 10px),
+      calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-repeat: no-repeat;
+  }
+
+  &__btn {
+    width: 100%;
+    @include respond(phone) {
+      width: 90%;
+    }
+  }
+}

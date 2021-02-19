@@ -1,0 +1,71 @@
+.header {
+  width: 100%;
+  height: 600px;
+  position: relative;
+
+  &__heroBox {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    & img {
+      animation: zoomin 5s ease-in forwards;
+    }
+  }
+  &__heroImage {
+    width: 100%;
+  }
+
+  &__textBox {
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 500px;
+  }
+
+  &__playBox {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    margin-top: 3rem;
+  }
+
+  &__playBtn {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    margin-right: 1.5rem;
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/* Zoom in Keyframes */
+@-webkit-keyframes zoomin {
+  /* start */
+  0% {
+    transform: 0;
+  }
+  /* end */
+  100% {
+    transform: scale3d(1.2, 1.2, 1.2) translate3d(10px, 10px, 0px);
+  }
+}
+@keyframes zoomin {
+  /* start */
+  0% {
+    transform: 0;
+  }
+  /* end */
+  100% {
+    transform: scale3d(1.2, 1.2, 1.2) translate3d(10px, 10px, 0px);
+  }
+}

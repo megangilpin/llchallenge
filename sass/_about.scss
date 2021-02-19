@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  justify-content: center;
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(min-content, 550px) minmax(min-content, 420px);
+    grid-template-rows: 1fr;
+    gap: 0px 30px;
+    padding: 10rem 6.5rem;
+    @include respond(tab-land) {
+      padding: 10rem 3rem;
+    }
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      padding: 5rem 3rem;
+    }
+  }
+
+  &__image {
+    background-image: url(../assets/img/image2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond(tab-port) {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text {
+    & h2 {
+      margin-bottom: 2rem;
+    }
+    & p {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

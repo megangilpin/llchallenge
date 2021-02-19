@@ -1,0 +1,110 @@
+.footer {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 8rem 8rem 4rem 8rem;
+  @include respond(tab-land) {
+    padding: 4rem 3rem;
+  }
+
+  &__info {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: flex-start;
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
+  }
+
+  &__company {
+    padding-right: 7rem;
+
+    @include respond(tab-land) {
+      order: 2;
+      padding: 0;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    width: 90px;
+    margin-bottom: 1rem;
+    @include respond(tab-land) {
+      margin-top: 9px;
+      margin-right: 2rem;
+    }
+  }
+
+  &__address {
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__links {
+    flex: 1 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include respond(phone) {
+      justify-content: flex-start;
+    }
+  }
+
+  @include respond(phone) {
+    &__links-list {
+      width: 50%;
+      margin-top: 2rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__list {
+    list-style: none;
+    color: $color-grey-light;
+  }
+
+  &__list-item {
+    padding-bottom: 0.5rem;
+    & a {
+      text-decoration: none;
+      color: $color-grey-light;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__subfooter {
+    padding-top: 2.5rem;
+    border-top: 0.5px solid #455c88;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__conditions {
+    display: flex;
+    font-weight: bold;
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  &__conditions-text {
+    padding-right: 2.5rem;
+  }
+
+  &__social-links {
+    text-decoration: none;
+    margin-left: 2rem;
+  }
+}
