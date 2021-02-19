@@ -4,9 +4,9 @@ Front-end challenge for Lifted Logic
 
 ## Tech Stack
 
-SASS
-Slider.js
-Google Maps API
+-SASS
+-Slider.js
+-Google Maps API
 
 ## Run Locally
 
